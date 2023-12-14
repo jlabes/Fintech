@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Welcome</title>
+	<link href="webjars/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/welcome.css" rel="stylesheet">
+	<script src="webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+	<script src="webjars/jquery/3.7.1/jquery.min.js"></script>
+	<script src="webjars/jquery/3.7.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.js"></script>
+	<script src="/js/welcome.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="row row-bordered">
+			<div id="titleHeader" class="col-10">
+				Bem vindo, <span th:text="${data.user.name}" /> &nbsp; <span th:text="${data.user.lastName}" />
+			</div>
+			<div id="btnNotification" class="col-2 text-end justify-content-center align-self-center">
+				<a href="">
+					<img src="/images/notification.png" /></a>
+			</div>
+		</div>
+	</header>
+	<nav id="navigation">
+		<ul class="pagination text-center justify-content-center align-self-center">
+			<li class="page-item">
+				<a class="page-link" 7href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">
+					<input data-provide="datepicker" data-date-format='mm/yyyy'>
+				</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<div id="portfolio">
+		<div class="row text-center justify-content-center align-self-center">
+			<div class="card portfolio-item">
+				<div class="card-body">
+					<h5 class="card-title" style="font-size: 42px;">Recebimentos</h5>
+					<p class="card-text">
+						<img src="/images/real_2.png"> &nbsp; <span th:text="${data.portfolio.income}" style="font-size: 42px;" />
+					</p>
+					<a href="#" class="btn btn-primary">Detalhes</a>
+				</div>
+			</div>
+			<div class="card portfolio-item">
+				<div class="card-body">
+					<h5 class="card-title" style="font-size: 42px;">Gastos</h5>
+					<p class="card-text"><img src="/images/real_2.png"> &nbsp; <span style="font-size: 42px;"> 0,00 </span></p>
+					<a href="#" class="btn btn-primary">Detalhes</a>
+				</div>
+			</div>
+		</div>
+		<div class="row row-bordered text-center justify-content-center align-self-center">
+			<div class="card portfolio-item">
+				<div class="card-body">
+					<h5 class="card-title" style="font-size: 42px;">Investimentos</h5>
+					<p class="card-text"><img src="/images/real_2.png"> &nbsp; <span style="font-size: 42px;"> 0,00 </span></p>
+					<a href="#" class="btn btn-primary">Detalhes</a>
+				</div>
+			</div>
+			<div class="card portfolio-item">
+				<div class="card-body">
+					<h5 class="card-title" style="font-size: 42px;">Saldo</h5>
+					<p class="card-text"><img src="/images/real_2.png"> &nbsp; <span style="font-size: 42px;"> 0,00 </span></p>
+					<a href="#" class="btn btn-primary">Detalhes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row row-bordered text-center justify-content-center">
+		<div class="col align-self-center" style="font-size: 42px;">
+			Último Gasto
+		</div>
+		<div class="col align-self-center" style="font-size: 32px;">
+			01/01/2023
+		</div>
+	</div>
+	<div class="row row-bordered text-center justify-content-center">
+		<div class="col">
+			<div class="row">
+				<div class="col align-self-center">
+					<img src="/images/gym.png" style="width:42px; height:42px;"> &nbsp; <span
+						style="font-size: 32px;">Gym</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col align-self-center">
+					<span style="font-size: 32px;">Cartão de Crédito</span>
+				</div>
+			</div>
+		</div>
+		<div class="col align-self-center">
+			<img src="/images/real_1.png"> <span style="font-size: 32px;">&nbsp; - 100,00</span>
+		</div>
+	</div>
+	<div class="row text-center justify-content-center align-self-center" style="margin-top: 1%;">
+		<div class="col">
+			<a href=""><img src="/images/home.png"></a>
+		</div>
+		<div class="col">
+			<a href=""><img src="/images/portfolio.png"></a>
+		</div>
+		<div class="col">
+			<a href=""><img src="/images/credit_card.png"></a>
+		</div>
+		<div class="col">
+			<a href=""><img src="/images/profile.png"></a>
+		</div>
+	</div>
+	<script>
+		$('.datepicker').datepicker();		
+	</script>
+</body>
+
+</html>

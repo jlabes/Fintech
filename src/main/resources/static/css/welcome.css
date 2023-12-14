@@ -1,0 +1,35 @@
+.row-bordered {
+	position: relative;
+}
+
+.row-bordered:after {
+	content: "";
+	display: block;
+	border-bottom: 1px solid black;
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+}
+
+#titleHeader {
+	padding-left: 10%;
+	font-size: 64px;
+}
+
+#btnNotification {
+	padding-right: 10%;
+}
+
+#navigation {
+	margin-top: 1%;
+}
+
+.portfolio-item {
+	width: 23rem;
+	margin: 1%;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: black !important;
+}
